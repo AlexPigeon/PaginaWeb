@@ -3,24 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilo.css">
+    <title>MenuRestaurante</title>
+    <script type="module" src="data.js"></script>
     <script type="module" src="main.js"></script>
-    <title>Mi pagina web</title>
+
+
+
 </head>
+
+<style>
+    body{
+        background-color: rgba(233, 233, 233, 0.884);
+    }
+
+ 
+
+    #main{
+        width: 90vw;
+        
+        min-height: 100vh;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 10px;
+    }
+
+    .titulo{
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    #categorias{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 20px;
+    }
+
+    #categorias button{
+       width: 70px;
+       height: 50px;
+        background-color: rgb(117, 87, 50);
+        color: white;
+        border-style: none;
+        border-radius: 10px;
+        
+    }
+
+    #categorias button:hover {
+        background-color: rgb(148, 129, 101);
+    }
+
+    h1,h2{
+        margin: 0;
+    }
+    .flex{
+        display: flex;        
+       column-gap: 50px;       
+       width: 45%;       
+    }
+
+    .flex img{
+        width: 230px;
+        height: 210px;
+        border-radius: 15px;
+        margin: 0;
+    }
+
+    @media (max-width:640px){
+        #main{
+        width: 80vw;
+        min-height: 100vh;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 15px;
+    }
+
+
+  .flex{
+        display: flex;        
+       column-gap: 50px;       
+       width: 45%;       
+    }
+}
+
+
+</style>
+
+
 <body>
-    <h1>Hola</h1>
-    <div class="flex">
-        <button>+10</button>
-        <button>+5</button>
-        <button>+2</button>
-        <button>+1</button>
-
-        <h2>Numero</h2>
-
-        <button>-1</button>
-        <button>-2</button>
-        <button>-5</button>
-        <button>-10</button>
+    <div class="titulo">
+        <h1>My Restaurant</h1>
     </div>
+
+    <div id="categorias">
+        <button id="todos">Todos</button>
+        <button id="platillos">Platillo</button>
+        <button id="postres">Postre</button>
+        <button id="bebidas">Bebida</button>
+    </div>
+
+    <div id="main"></div>
+
+
+    
+
+
 </body>
+
+
+
 </html>
